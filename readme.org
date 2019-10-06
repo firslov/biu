@@ -10,7 +10,7 @@ Edit the bashrc file:
 export PATH="/path/to/your/home/.biu.d/:$PATH"
 #+end_src
 ** Example
-1. git tool:
+*** git tool:
 init+add+commit
 #+begin_src 
 biu git ini [commit]
@@ -19,7 +19,7 @@ add+commit+push
 #+begin_src 
 biu git ps [commit]
 #+end_src
-2. shell tool:
+*** shell tool:
 ls
 #+begin_src 
 biu shell ls
