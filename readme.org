@@ -1,0 +1,27 @@
+* biu
+This is a magic tool used in shell and based on python.
+** Installation
+Clone files:
+#+begin_src 
+git clone https://github.com/firslov/biu ~/.biu.d
+#+end_src
+Edit the bashrc file:
+#+begin_src 
+export PATH="/path/to/your/home/.biu.d/:$PATH"
+#+end_src
+** Example
+1. git tool:
+init+add+commit
+#+begin_src 
+biu git ini [commit]
+#+end_src
+add+commit+push
+#+begin_src 
+biu git ps [commit]
+#+end_src
+2. shell tool:
+ls
+#+begin_src 
+biu shell ls
+#+end_src
+...

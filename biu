@@ -5,7 +5,7 @@ import os
 import importlib
 import glob
 
-sys.path.append(r'/Users/firslov/.biu.d/')
+sys.path.append(os.getcwd())
 
 if __name__ == '__main__':
     if len(sys.argv) == 1:
