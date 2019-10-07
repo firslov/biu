@@ -5,9 +5,7 @@ import os
 import importlib
 import glob
 
-sys.path.append(os.getcwd())
-
-if __name__ == '__main__':
+def main():
     if len(sys.argv) == 1:
         print("All commmands:")
         for filename in glob.glob(r'/Users/firslov/.biu.d/*.py'):
@@ -22,3 +20,6 @@ if __name__ == '__main__':
         else:
             getattr(biu,sys.argv[2])(sys.argv[3:])
     sys.exit()
+
+if __name__ == '__main__':
+    main()
