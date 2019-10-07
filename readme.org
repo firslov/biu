@@ -3,25 +3,21 @@ This is a magic tool used in shell and based on python.
 ** Installation
 Clone files:
 #+begin_src 
-git clone https://github.com/firslov/biu ~/.biu.d
+pip install git+https://github.com/firslov/biu
 #+end_src
-Edit the bashrc file:
-#+begin_src 
-export PATH="/path/to/your/home/.biu.d/:$PATH"
-#+end_src
-** Example
-*** git tool:
-init+add+commit
-#+begin_src 
-biu git ini [commit]
-#+end_src
-add+commit+push
-#+begin_src 
-biu git ps [commit]
-#+end_src
-*** shell tool:
-ls
-#+begin_src 
-biu shell ls
-#+end_src
-...
+It looks up for python recipes in the =~/.biu.d= directory. 
+Here is an example recipe
+
+#+BEGIN_SRC python
+def clean():
+    return [
+        'rm *.pyc',
+        'rm *~',
+        'rm -rf __pycache__'
+    ]
+#+END_SRC
+Suppose it is saved as =~/.biu.d/dir.py=, one can call it with
+#+BEGIN_SRC bash
+biu dir clean
+#+END_SRC
+Enjoy!
