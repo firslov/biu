@@ -1,4 +1,4 @@
-#!/anaconda3/bin/python
+#!/bin/env/python
 # -*- coding: utf-8 -*-
 import sys
 import os
@@ -6,9 +6,12 @@ import importlib
 import glob
 
 def main():
+    Home = os.environ['HOME']
+    conf_dir = Home + '/.biu.d/'
+    sys.path.append(conf_dir)
     if len(sys.argv) == 1:
         print("All commmands:")
-        for filename in glob.glob(r'~/.biu.d/*.py'):
+        for filename in glob.glob(conf_dir + '*.py'):
             filename = os.path.basename(filename).split('.')[0]
             print(filename)
     else:
