@@ -23,6 +23,7 @@ def main():
             try:
                 ret = getattr(mod, "help")()
             except Exception:
+                ret = None
                 print(f"No help found for {mod_name}!")
         elif len(sys.argv) == 3:
             ret = getattr(mod, sys.argv[2])()
