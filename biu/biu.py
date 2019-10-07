@@ -8,7 +8,7 @@ import glob
 def main():
     if len(sys.argv) == 1:
         print("All commmands:")
-        for filename in glob.glob(r'/Users/firslov/.biu.d/*.py'):
+        for filename in glob.glob(r'~/.biu.d/*.py'):
             filename = os.path.basename(filename).split('.')[0]
             print(filename)
     else:

@@ -3,11 +3,9 @@ from setuptools import setup, find_packages
 with open("readme.org", "r") as f:
     readme = f.read()
 
-BIUSRC = ['**.hy']
-
 setup(
     name='pybiu',
-    version='0.1.00',
+    version='0.1.0',
     description='Biu, just like that',
     long_description=readme,
     packages=find_packages(include=['biu']),
