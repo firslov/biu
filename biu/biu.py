@@ -20,11 +20,13 @@ def main():
         mod_name = sys.argv[1]
         mod = importlib.import_module(mod_name)
         if len(sys.argv) == 2:
-            try:
-                ret = getattr(mod, "help")()
-            except Exception:
-                ret = None
-                print(f"No help found for {mod_name}!")
+            ## print all functions
+            print("Available commands:")
+            dic = mod.__dict__
+            for val in dic:
+                if "<function " in str(dic[val]):
+                    print(val)
+            ret = None
         elif len(sys.argv) == 3:
             ret = getattr(mod, sys.argv[2])()
         else:
